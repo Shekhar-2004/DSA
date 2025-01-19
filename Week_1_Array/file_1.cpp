@@ -46,37 +46,69 @@ using namespace std;
 // }
 
 //hollow diamond
+// int main() {
+//     int line = 10;
+//     int n = line/2;
+//     for( int i =0; i<n; i++) {
+//         //Space_1
+//         for(int j =0; j < n -i -1; j++) {
+//             cout << " ";
+//         }
+//         cout << "*";
+//         if( i != 0) {
+//             for(int j =0; j<2*i-1; j++) {
+//             cout << " ";
+//         }
+//             cout << "*";
+//         }
+//         cout << endl;
+//     }
+//      for( int i =n-2; i>=0; i--) {
+//         //Space_1
+//         for(int j =0; j < n -i -1; j++) {
+//             cout << " ";
+//         }
+//         cout << "*";
+//         if( i != 0) {
+//             for(int j =0; j<2*i-1; j++) {
+//             cout << " ";
+//         }
+//             cout << "*";
+//             if(i == 0){
+//             cout << "*";
+//         }
+//         }
+//         cout << endl;
+//     }
+// }
+
+//Butterfly pattern
 int main() {
-    int line = 10;
-    int n = line/2;
-    for( int i =0; i<n; i++) {
-        //Space_1
-        for(int j =0; j < n -i -1; j++) {
+    int n = 4;
+    //Upper Part
+    for(int i =0; i<n; i++) {
+        
+        for(int j =0; j <i+1; j++) {
+            cout << "*";
+        }
+        for(int j =0; j < 2*(n-i-1); j++) {
             cout << " ";
         }
-        cout << "*";
-        if( i != 0) {
-            for(int j =0; j<2*i-1; j++) {
-            cout << " ";
-        }
+        for(int j =0; j<i+1; j++) {
             cout << "*";
         }
         cout << endl;
     }
-     for( int i =n-2; i>=0; i--) {
-        //Space_1
-        for(int j =0; j < n -i -1; j++) {
-            cout << " ";
-        }
-        cout << "*";
-        if( i != 0) {
-            for(int j =0; j<2*i-1; j++) {
-            cout << " ";
-        }
-            cout << "*";
-            if(i == 0){
+    //Down Part
+    for(int i =0 ; i <n; i++) {
+        for(int j =0; j<n-i; j++) {
             cout << "*";
         }
+        for(int j =0; j< 2*i; j++) {
+            cout << " ";
+        }
+        for(int j =0; j<n-i; j++) {
+            cout << "*";
         }
         cout << endl;
     }
